@@ -13,6 +13,16 @@ Agents must NOT:
 - Call external APIs without declaring it in their definition
 - Produce output that bypasses the standard GO/NO-GO format
 
+## Token Efficiency Rules (mandatory in every agent)
+
+Every agent must include these 3 rules at the very top of its instructions,
+before any other steps:
+
+1. Read ONLY the policy files listed as required for your role — nothing else
+2. If the developer provides logs, files, or code — read max 50 lines only
+3. Respond in one turn using the standard output format
+   Ask at most one clarifying question, only if a critical piece of info is completely missing
+
 ---
 
 ## Standard Output Format
